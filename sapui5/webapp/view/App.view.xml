@@ -1,0 +1,64 @@
+<mvc:View
+    controllerName="logalilaboratorio.sapui5.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <!-- <VBox id="idVbox" class="sapUiSmallMargin">
+        <Text id="idTextHello" text="Hello World" />
+
+        <Input
+            id="idInputHello"
+            value="{/recipient/name}" 
+            description="Hello {/recipient/name}"
+            valueLiveUpdate="true"
+            width="60%" ></Input>
+
+        <Button id="idHelloButton" text="{i18n>buttonSayHello}" press=".onShowHello" />
+    </VBox> -->
+
+    <Shell id="shellMain">
+
+        <App id="appMain">
+            <pages>
+                <Page
+                    id="pageMain"
+                    title="{i18n>appTitle}">
+
+                    <content>
+
+                        <Panel
+                            id="panelMain"
+                            headerText="{i18n>panelHeader}"
+                            class="sapUiResponsiveMargin">
+
+                            <VBox id="vboxMain">
+
+                                <Text
+                                    id="textHello"
+                                    text="Hello {/recipient/name}"
+                                    class="sapUiSmallMargin boldElements" />
+
+                                <Input
+                                    id="inputName"
+                                    value="{/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="60%" />
+
+                                <Button
+                                    id="btnSayHello"
+                                    text="{i18n>buttonSayHello}"
+                                    press=".onShowHello"
+                                    class="sapUiSmallMarginEnd" />
+
+                            </VBox>
+
+                        </Panel>
+
+                    </content>
+
+                </Page>
+            </pages>
+        </App>
+
+    </Shell>
+</mvc:View>
