@@ -10,6 +10,16 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
+    "dataSources": {
+      "Northwind.svc": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    },
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.20.0",
@@ -50,6 +60,19 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "logalilaboratorio.sapui5.i18n.i18n"
+        }
+      },
+      "invoices": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+      },
+      "northwind": {
+        "dataSource": "Northwind.svc",
+        "preload": true,
+        "settings": {
+            "defaultBindingMode": "TwoWay",
+            "defaultCountMode":"Inline",
+            "refreshAfterChange":false
         }
       }
     },

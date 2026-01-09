@@ -2,6 +2,8 @@
     controllerName="logalilaboratorio.sapui5.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
 >
     <!-- <VBox id="idVbox" class="sapUiSmallMargin">
         <Text id="idTextHello" text="Hello World" />
@@ -17,48 +19,31 @@
     </VBox> -->
 
     <Shell id="shellMain">
-
         <App id="appMain">
             <pages>
                 <Page
                     id="pageMain"
-                    title="{i18n>appTitle}">
-
+                    title="{i18n>appTitle}"
+                >
+                    <headerContent>
+                        <Button
+                            id="btnHeaderDialog"
+                            icon="sap-icon://action"
+                            press=".onOpenDialogHeader"
+                        />
+                    </headerContent>
                     <content>
-
-                        <Panel
-                            id="panelMain"
-                            headerText="{i18n>panelHeader}"
-                            class="sapUiResponsiveMargin">
-
-                            <VBox id="vboxMain">
-
-                                <Text
-                                    id="textHello"
-                                    text="Hello {/recipient/name}"
-                                    class="sapUiSmallMargin boldElements" />
-
-                                <Input
-                                    id="inputName"
-                                    value="{/recipient/name}"
-                                    valueLiveUpdate="true"
-                                    width="60%" />
-
-                                <Button
-                                    id="btnSayHello"
-                                    text="{i18n>buttonSayHello}"
-                                    press=".onShowHello"
-                                    class="sapUiSmallMarginEnd" />
-
-                            </VBox>
-
-                        </Panel>
-
+                        <mvc:XMLView
+                            id="helloPanelEmbeddedView"
+                            viewName="logalilaboratorio.sapui5.view.HelloPanel"
+                        />
+                        <mvc:XMLView
+                            id="invoicesListView"
+                            viewName="logalilaboratorio.sapui5.view.InvoicesList"
+                        />
                     </content>
-
                 </Page>
             </pages>
         </App>
-
     </Shell>
 </mvc:View>

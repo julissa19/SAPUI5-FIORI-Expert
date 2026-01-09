@@ -1,0 +1,36 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="helloDialog"
+        title="{i18n>dialogTitle}">
+
+        <content>
+            <VBox
+                id="dialogVBox"
+                class="sapUiSmallMargin">
+
+                <core:Icon
+                    id="dialogIcon"
+                    src="sap-icon://hello-world"
+                    size="2rem"
+                    class="sapUiSmallMarginBottom" />
+
+                <Text
+                    id="dialogText"
+                    text="{i18n>dialogText}"
+                    class="sapUiSmallMargin" />
+            </VBox>
+        </content>
+
+        <beginButton>
+            <Button
+                id="btnCloseDialog"
+                text="{i18n>closeDialog}"
+                press=".onCloseDialog" />
+        </beginButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>

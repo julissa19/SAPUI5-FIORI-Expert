@@ -5,6 +5,8 @@ dist/
 Makefile*.mta
 mta_archives
 mta-*
-resources
+resources/
 archive.zip
 .*_mta_build_tmp
+package-lock.json
+package.json
